@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=IBM+Plex+Mono:wght@400;600&display=swap');
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cream: #f5f0e8;
+    --ink: #1a1410;
+    --ink-light: #3d3530;
+    --red: #c0392b;
+    --paper: #ede8df;
+    --paper-dark: #d9d2c5;
+    --font-display: 'Syne', sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+}
+
+body {
+    background-color: var(--cream);
+    background-image:
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 39px,
+            rgba(26,20,16,0.06) 39px,
+            rgba(26,20,16,0.06) 40px
+        );
+    color: var(--ink);
+    font-family: var(--font-mono);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+h1 {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 10vw, 6.5rem);
+    font-weight: 800;
+    line-height: 0.9;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    text-align: center;
+    margin-bottom: 3rem;
+    border-top: 2px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    padding: 0.4rem 0;
+    width: 100%;
+    max-width: 400px;
+}
+
+.game-panel {
+    background: var(--paper);
+    border: 3px solid var(--ink);
+    width: 100%;
+    max-width: 580px;
+    padding: 2.5rem;
+    position: relative;
+    box-shadow: 8px 8px 0px var(--ink);
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+button.rock,
+button.paper,
+button.scissor {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background: var(--cream);
+    color: var(--ink);
+    border: 3px solid var(--ink);
+    padding: 1.5rem 0.5rem;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    box-shadow: 4px 4px 0px var(--ink);
+}
+
+button.rock:hover,
+button.paper:hover,
+button.scissor:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px var(--ink);
+}
+
+button.rock:active,
+button.paper:active,
+button.scissor:active {
+    transform: translate(4px, 4px);
+    box-shadow: 0px 0px 0px var(--ink);
+}
+
+.divider {
+    height: 3px;
+    background: var(--ink);
+    margin: 1.5rem 0;
+}
+
+.score {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--ink);
+    text-align: center;
+    padding: 1rem;
+    background: var(--paper-dark);
+    border: 2px solid var(--ink);
+    min-height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.score.win  { background: var(--ink); color: var(--cream); }
+.score.lose { background: var(--red); color: var(--cream); }
+
+.stats {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    color: var(--ink-light);
+    text-align: center;
+    margin-top: 1rem;
+    min-height: 1.5rem;
+    text-transform: uppercase;
+}
+
+button.reset {
+    display: block;
+    margin: 1.5rem auto 0;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    background: transparent;
+    color: var(--ink-light);
+    border: 1.5px solid var(--ink-light);
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    transition: all 0.1s ease;
+}
+
+button.reset:hover {
+    background: var(--ink);
+    color: var(--cream);
+    border-color: var(--ink);
+}
+
+@media (max-width: 480px) {
+    .game-panel { padding: 1.5rem; box-shadow: 5px 5px 0px var(--ink); }
+    .buttons { gap: 0.6rem; }
+    button.rock, button.paper, button.scissor { padding: 1rem 0.25rem; font-size: 0.85rem; }
+}
