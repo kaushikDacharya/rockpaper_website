@@ -1,105 +1,111 @@
-# 🪨 Rock Paper Scissors — Full Stack Version
+# 🪨 Rock Paper Scissors — Full Stack Web App
 https://kaushikdacharya.github.io/rockpaper_website/
 
-An upgraded version of my earlier Rock-Paper-Scissors project (originally built using Python + wxPython), now rebuilt as a **full-stack web application** using a modern frontend-backend architecture.
+A full-stack implementation of the classic Rock-Paper-Scissors game, redesigned from an earlier desktop version (Python + wxPython) into a **modern web application** using a client-server architecture.
 
 ---
 
-## 🚀 What's New
+## 🚀 Overview
 
-* 🌐 **Frontend (UI):** Built using HTML, CSS, and JavaScript
-* ⚙️ **Backend (API):** Powered by Flask
-* 🔗 **API Integration:** Seamless communication between frontend and backend using `fetch` and async/await
-* ☁️ **Deployed Online:**
-
-  * Frontend → GitHub Pages
-  * Backend → Render
+This project demonstrates the transition from a traditional GUI-based application to a **web-based system with API-driven communication**. The frontend interacts with a Flask backend via HTTP requests, showcasing real-world full-stack integration.
 
 ---
 
-## 🧠 Core Logic (The Cool Part)
+## 🧠 Key Highlights
 
-Instead of using traditional `if-else` conditions to determine the winner, this project uses a **mathematical approach**:
+### 🔹 Mathematical Game Logic (Cross Product Approach)
 
-* Each move (rock, paper, scissor) is represented as a **unit vector**
-* The result is computed using the **cross product of vectors**
+Instead of relying on conventional `if-else` chains, the game logic is implemented using:
 
-This eliminates bulky condition checks and makes the logic:
+* **Unit vector representations** of moves
+* **Vector cross product** to determine outcomes
 
-* cleaner
-* more elegant
-* mathematically intuitive
+This approach:
+
+* Eliminates verbose conditional logic
+* Provides a clean and scalable solution
+* Demonstrates applied mathematical thinking in programming
 
 ---
 
-## 💾 Persistent Score System
+### 🔹 Persistent State (No Data Loss on Refresh)
 
-The score is stored using **localStorage**, which means:
+* Score is stored using **localStorage**
+* Ensures:
 
-* ✅ Score persists even after refreshing the page
-* ✅ No backend database required
-* ✅ Instant and efficient
+  * State persistence across page reloads
+  * Zero backend storage dependency
+  * Instant client-side updates
+
+---
+
+### 🔹 Full Stack Integration
+
+* Frontend communicates with backend via **REST API (POST requests)**
+* Uses modern JavaScript (`fetch`, `async/await`)
+* Demonstrates clear separation of concerns:
+
+  * UI → JavaScript
+  * Logic → Flask API
 
 ---
 
 ## 🕹️ Features
 
-* Interactive UI with buttons
-* Real-time game results
-* Score tracking
+* Interactive game interface
+* Real-time result computation via API
+* Persistent score tracking
 * Reset functionality
-* Backend-powered result computation
+* Clean and responsive UI
 
 ---
 
 ## 🛠️ Tech Stack
 
-* **Frontend:** HTML, CSS, JavaScript
-* **Backend:** Flask (Python)
-* **Deployment:**
-
-  * GitHub Pages (Frontend)
-  * Render (Backend)
+| Layer      | Technology                                |
+| ---------- | ----------------------------------------- |
+| Frontend   | HTML, CSS, JavaScript                     |
+| Backend    | Flask (Python)                            |
+| API        | REST (JSON over HTTP)                     |
+| Deployment | GitHub Pages (Frontend), Render (Backend) |
 
 ---
 
-## 📌 How It Works
+## ⚙️ How It Works
 
-1. User selects Rock / Paper / Scissor
-2. JavaScript sends a POST request to Flask API
+1. User selects a move (Rock/Paper/Scissor)
+2. Frontend sends a POST request to the Flask API
 3. Backend computes result using vector cross product
-4. Result is sent back and displayed
-5. Score updates and persists using localStorage
-
----
-
-## 🎯 Why This Project
-
-This project demonstrates:
-
-* Transition from desktop apps → web apps
-* Understanding of APIs and client-server architecture
-* Creative problem-solving using math instead of brute logic
-* Real-world deployment workflow
+4. Response is returned as JSON
+5. UI updates and score is persisted locally
 
 ---
 
 ## 🌍 Live Demo
 
-Frontend: *(your GitHub Pages link here)*
-Backend: *(your Render link here)*
+* **Frontend:** *(add your GitHub Pages URL here)*
+* **Backend API:** *(add your Render URL here)*
 
 ---
 
-## 💡 Future Improvements
+## 📈 Learning Outcomes
 
-* Animations and sound effects
-* Leaderboard system
+* API design and consumption
+* Frontend-backend integration
+* Deployment of full-stack applications
+* Replacing brute-force logic with mathematical models
+
+---
+
+## 🔮 Future Enhancements
+
+* Animations and improved UX
 * Multiplayer support
-* Pure frontend version (no backend latency)
+* Leaderboard with database integration
+* Backend optimization or migration to serverless
 
 ---
 
 ## 👨‍💻 Author
 
-Kaushik D Acharya
+**Kaushik D Acharya**
