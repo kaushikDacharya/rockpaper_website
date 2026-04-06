@@ -37,7 +37,7 @@ window.onload = function (){
 
 async function senddata(){
     try{
-const response = await fetch("https://rockpaper-website-1.onrender.com/compute",{
+const response = await fetch("https://rockpaper-website-2.onrender.com/compute",{
     method : "POST",
     headers : {"Content-Type" : "application/json"},
     body : JSON.stringify({playerhand,computerhand})
