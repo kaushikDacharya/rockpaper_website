@@ -102,4 +102,4 @@ Backend: *(your Render link here)*
 
 ## 👨‍💻 Author
 
-Kaushik Acharya
+Kaushik D Acharya
